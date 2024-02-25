@@ -167,3 +167,44 @@ TW_USE_TOOLBOX := true
 # Tools - magiskboot
 TW_INCLUDE_REPACKTOOLS := true
 
+# Display
+TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
+TARGET_RECOVERY_LCD_BACKLIGHT_PATH := \"/sys/class/leds/lcd-backlight/brightness\"
+TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone1/temp
+TW_MAX_BRIGHTNESS := 255
+TW_DEFAULT_BRIGHTNESS := 150
+TW_NO_SCREEN_BLANK := true
+TW_SCREEN_BLANK_ON_BOOT := true
+
+# Resolution
+DEVICE_SCREEN_WIDTH := 720
+DEVICE_SCREEN_HEIGHT := 1600
+
+# Statusbar icons flags 720 x 1600
+TW_STATUS_ICONS_ALIGN := center
+TW_CUSTOM_CPU_POS := 142
+TW_CUSTOM_CLOCK_POS := 330
+TW_CUSTOM_BATTERY_POS := 800
+
+# TWRP specific build flags - Configuration
+TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
+TW_DEFAULT_LANGUAGE := en
+TW_EXCLUDE_DEFAULT_USB_INIT := true
+TW_INCLUDE_NTFS_3G := true
+TARGET_USES_MKE2FS := true
+TARGET_DISABLE_TRIPLE_BUFFERING := false
+
+# Storage
+TW_NO_USB_STORAGE := false
+TW_INTERNAL_STORAGE_PATH := "/data/media/0"
+TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
+TW_EXTERNAL_STORAGE_PATH := "/external_sd"
+TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
+TW_HAS_MTP := true
+TW_MTP_DEVICE := /dev/mtp_usb
+TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.usb0/lun.%d/file
+
+# Debug
+TWRP_INCLUDE_LOGCAT := true
+TARGET_USES_LOGD := true
+
