@@ -5,28 +5,27 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+PRODUCT_RELEASE_NAME := CG65
+
 # Inherit from those products. Most specific first.
+$(call inherit-product, vendor/twrp/config/common.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
+$(call inherit-product, device/vortex/CG65/device.mk)
 
 # Installs gsi keys into ramdisk, to boot a developer GSI with verified boot.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
+# $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 
 # Virtual A/B OTA
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
-
-# Inherit some common Omni stuff.
-$(call inherit-product, vendor/omni/config/common.mk)
-
-# Inherit from CG65 device
-$(call inherit-product, device/vortex/CG65/device.mk)
 
 PRODUCT_DEVICE := CG65
 PRODUCT_NAME := twrp_CG65
 PRODUCT_BRAND := Vortex
 PRODUCT_MODEL := CG65
 PRODUCT_MANUFACTURER := vortex
-
 PRODUCT_GMS_CLIENTID_BASE := android-vortex
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
