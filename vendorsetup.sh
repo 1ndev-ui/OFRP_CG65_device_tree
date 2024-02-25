@@ -9,7 +9,6 @@ export FOX_BUILD_DEVICE="CG65"
 export ALLOW_MISSING_DEPENDENCIES=true
 export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=1
 export TARGET_DEVICE_ALT="Vortex, CG65"
-export FOX_TARGET_DEVICES="Vortex, CG65"
 export BUILD_USERNAME="nobody"
 export BUILD_HOSTNAME="android-build"
 
