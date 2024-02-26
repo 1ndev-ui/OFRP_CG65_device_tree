@@ -173,7 +173,7 @@ TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
     $(TARGET_OUT_VENDOR_SHARED_LIBRARIES)/lib64/vendor.microtrust.hardware.thh@2.0.so \
     $(TARGET_OUT_VENDOR_EXECUTABLES)/bin/hw/android.hardware.gatekeeper@1.0-service \
     $(TARGET_OUT_VENDOR_EXECUTABLES)/bin/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-service \
-    $(TARGET_OUT_VENDOR_EXECUTABLES)/bin/hw/android.hardware.keymaster@4.1-service.beanpod \
+    $(TARGET_OUT_VENDOR_EXECUTABLES)/bin/hw/android.hardware.keymaster@4.1-service.beanpod
 
 
 TW_LOAD_VENDOR_MODULES := "ilitek_v3.ko"
