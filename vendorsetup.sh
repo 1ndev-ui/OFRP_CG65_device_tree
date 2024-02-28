@@ -19,7 +19,7 @@ export OF_DONT_PATCH_ENCRYPTED_DEVICE=1
 
 # We have a/b partitions
 export FOX_AB_DEVICE=1
-export FOX_VIRTUAL_AB_DEVICE=0
+export FOX_VIRTUAL_AB_DEVICE=1
 export OF_AB_DEVICE_WITH_RECOVERY_PARTITION=0
 
 # Screen specifications
@@ -36,6 +36,8 @@ export OF_NO_TREBLE_COMPATIBILITY_CHECK=1
 export OF_FBE_METADATA_MOUNT_IGNORE=1
 export OF_PATCH_AVB20=1
 export OF_USE_LEGACY_BATTERY_SERVICES=1
+export FOX_DRASTIC_SIZE_REDUCTION="1"
+export OF_FORCE_PREBUILT_KERNEL=1
 
 # Run a process after formatting data to work-around MTP issues
 export OF_RUN_POST_FORMAT_PROCESS=1
