@@ -95,6 +95,3 @@ export FOX_INSTALLER_DISABLE_AUTOREBOOT=1
 
 # Applications Configurations
 export FOX_ENABLE_APP_MANAGER=1
-
-# Custom Binaries to SD Card Configuration
-export FOX_CUSTOM_BINS_TO_SDCARD=1
