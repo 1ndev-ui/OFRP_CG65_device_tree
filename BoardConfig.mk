@@ -35,9 +35,7 @@ TARGET_BOOTLOADER_BOARD_NAME := k65v1_64_bsp
 TARGET_NO_BOOTLOADER := true
 
 # Boot Image
-BOARD_KERNEL_CMDLINE += bootopt=64S3,32N2,64N2
-BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
-BOARD_KERNEL_CMDLINE += androidboot.force_normal_boot=1
+BOARD_KERNEL_CMDLINE += bootopt=64S3,32N2,64N2 buildvariant=user androidboot.selinux=permissive androidboot.force_normal_boot=1
 BOARD_HASH_TYPE := sha1
 BOARD_KERNEL_BASE := 0x40078000
 BOARD_KERNEL_PAGESIZE := 2048
@@ -86,9 +84,10 @@ BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_COPY_OUT_VENDOR := vendor
 
 # Dynamic Partition
+BOARD_SUPER_PARTITION_SIZE := 9126805504
 BOARD_SUPER_PARTITION_GROUPS := main
-BOARD_MAIN_PARTITION_LIST := system vendor product
-BOARD_MAIN_SIZE := 9122611200 # TODO: Fix hardcoded value
+BOARD_VORTEX_DYNAMIC_PARTITIONS_PARTITION_LIST := system vendor product
+BOARD_VORTEX_DYNAMIC_PARTITIONS_SIZE := 9122611200 # TODO: Fix hardcoded value
 
 # Platform
 TARGET_BOARD_PLATFORM := mt6765
@@ -166,7 +165,6 @@ TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
     $(TARGET_OUT_VENDOR_EXECUTABLES)/bin/hw/android.hardware.gatekeeper@1.0-service \
     $(TARGET_OUT_VENDOR_EXECUTABLES)/bin/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-service \
     $(TARGET_OUT_VENDOR_EXECUTABLES)/bin/hw/android.hardware.keymaster@4.1-service.beanpod
-
 
 TW_LOAD_VENDOR_MODULES := "ilitek_v3.ko"
 
