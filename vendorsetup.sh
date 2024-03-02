@@ -79,9 +79,6 @@ export OF_QUICK_BACKUP_LIST="/boot;/data;/super;"
 # Set default Keymaster Version
 export OF_DEFAULT_KEYMASTER_VERSION=4.1
 
-# Magisk
-export FOX_USE_SPECIFIC_MAGISK_ZIP=~/Magisk/Magisk-v27.0.zip
-
 # Add some extras
 export FOX_USE_ZIP_BINARY=1
 export FOX_USE_TAR_BINARY=1
