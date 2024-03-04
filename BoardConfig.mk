@@ -35,7 +35,7 @@ TARGET_BOOTLOADER_BOARD_NAME := k65v1_64_bsp
 TARGET_NO_BOOTLOADER := true
 
 # Boot Image
-BOARD_KERNEL_CMDLINE += bootopt=64S3,32N2,64N2 buildvariant=user androidboot.selinux=permissive androidboot.force_normal_boot=1
+BOARD_KERNEL_CMDLINE += bootopt=64S3,32N2,64N2 androidboot.selinux=permissive
 BOARD_HASH_TYPE := sha1
 BOARD_KERNEL_BASE := 0x40078000
 BOARD_KERNEL_PAGESIZE := 2048
@@ -57,7 +57,7 @@ BOARD_MKBOOTIMG_ARGS += --dtb $(TARGET_PREBUILT_DTB)
 BOARD_MKBOOTIMG_ARGS += --board $(TARGET_BOOTLOADER_BOARD_NAME)
 
 # Kernel
-BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
+BOARD_KERNEL_IMAGE_NAME := CG65
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image.gz-dtb
 TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb.img
 BOARD_PREBUILT_DTBIMAGE_DIR := $(DEVICE_PATH)/prebuilt/
