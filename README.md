@@ -9,4 +9,4 @@
 #
 ```
 
-Edited for minimalTWRP 12.1
+Edited for OrangeFox Recovery 12.1
